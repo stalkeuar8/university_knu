@@ -1,24 +1,21 @@
-
 import math
+
 
 def _check_x_value(x: float) -> bool:
     """
-    Receives a float value 'x',
-    Сhecks whether 'x' is within the expression's domain.
-    It returns True if the value is valid, and False if the value is invalid.
+    Checks whether the float value 'x' is within the
+    expression's domain.
+    Returns True if the value is valid, otherwise False.
     """
-
-    is_acceptable = (9 <= x <= 11 and x != 10)
+    is_acceptable = 9 <= x <= 11 and x != 10
     return is_acceptable
 
 
 def f(x: float) -> float:
     """
-    Takes a float value 'x' as an argument, 
-    evaluates the expression using that value of 'x'.
-    It returns the result of evaluating the expression as a float.
+    Takes a float value 'x' and evaluates the expression.
+    Returns the calculated result as a float.
     """
-    
     result = (
         math.sin(math.pi / 62) ** 2
         + 25 * math.e / (52 * math.pi)
@@ -31,25 +28,23 @@ def f(x: float) -> float:
 
 def main():
     """
-    The main program's function, 
-    it prints an information about program and its author, reads a number, 
-    checks it, and displays the result of the calculation.
+    Displays information about the program and its author,
+    reads and validates input, and displays the result.
     """
     print("Author: Marchenko Artem")
     print("Variant 131. Calculating the value of a mathematical expression.")
 
     try:
         x = float(input("Enter x value (from 9 to 11, but not 10): "))
-        
+
     except (ValueError, EOFError):
         print("\nwrong input")
-
+        
     else:
         print("\n***** do calculations ... ", end="")
 
         if _check_x_value(x):
             result = f(x)
-
         else:
             result = None
 
@@ -58,8 +53,8 @@ def main():
 
         if result is None:
             print("result = undefined")
-
         else:
             print(f"result = {result:.7f}")
+
 
 main()
