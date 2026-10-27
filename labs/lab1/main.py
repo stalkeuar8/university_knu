@@ -1,6 +1,3 @@
-# Lab №1
-# Author - Marchenko Artem, a student in group K-13
-# Variant - 131
 
 import math
 
