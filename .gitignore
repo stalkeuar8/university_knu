@@ -1,0 +1,11 @@
+*
+
+!*/
+
+!*.py
+!*.txt
+!*.jpg
+!*.jpeg
+!*.png
+
+!/.gitignore
