@@ -6,7 +6,7 @@ import math
 
 def _check_x_value(x: float) -> bool:
     """
-    The function '_check_x_value' receives a value 'x'.
+    Receives a float value 'x',
     Сhecks whether 'x' is within the expression's domain.
     It returns True if the value is valid, and False if the value is invalid.
     """
@@ -17,7 +17,8 @@ def _check_x_value(x: float) -> bool:
 
 def f(x: float) -> float:
     """
-    The function 'f' takes a number 'x' as an argument and evaluates the expression using that value of 'x'.
+    Takes a float value 'x' as an argument, 
+    evaluates the expression using that value of 'x'.
     It returns the result of evaluating the expression as a float.
     """
     
@@ -33,8 +34,8 @@ def f(x: float) -> float:
 
 def main():
     """
-    Function 'main' is the main program's function.
-    It prints an information about program and its author, reads a number, 
+    The main program's function, 
+    it prints an information about program and its author, reads a number, 
     checks it, and displays the result of the calculation.
     """
     print("Author: Marchenko Artem")
