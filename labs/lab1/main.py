@@ -5,7 +5,7 @@ def _check_x_value(x: float) -> bool:
     """Check whether x is within the expression's domain.
     Return True for valid values and False otherwise.
     """
-    is_acceptable = 9 <= x <= 11 and x != 10
+    is_acceptable = (9 <= x <= 11 and x != 10)
     return is_acceptable
 
 
