@@ -2,19 +2,16 @@ import math
 
 
 def _check_x_value(x: float) -> bool:
-    """
-    Checks whether the float value 'x' is within the
-    expression's domain.
-    Returns True if the value is valid, otherwise False.
+    """Check whether x is within the expression's domain.
+    Return True for valid values and False otherwise.
     """
     is_acceptable = 9 <= x <= 11 and x != 10
     return is_acceptable
 
 
 def f(x: float) -> float:
-    """
-    Takes a float value 'x' and evaluates the expression.
-    Returns the calculated result as a float.
+    """Calculate the expression for a valid value of x.
+    Return the calculated result as a float.
     """
     result = (
         math.sin(math.pi / 62) ** 2
@@ -26,20 +23,15 @@ def f(x: float) -> float:
     return result
 
 
-def main():
-    """
-    Displays information about the program and its author,
-    reads and validates input, and displays the result.
-    """
+def main() -> None:
+    """Handles user input and display the calculation result."""
     print("Author: Marchenko Artem")
     print("Variant 131. Calculating the value of a mathematical expression.")
 
     try:
         x = float(input("Enter x value (from 9 to 11, but not 10): "))
-
     except (ValueError, EOFError):
         print("\nwrong input")
-        
     else:
         print("\n***** do calculations ... ", end="")
 
