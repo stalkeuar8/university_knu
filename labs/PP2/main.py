@@ -18,7 +18,7 @@ def s(x, eps):
 
     while a_n >= eps or a_n <= -eps:
         n += 1
-        a_n = (-a_n) * x / (n * (n + 1))
+        a_n *= -x / (n * (n + 1))
         total += a_n
 
     return total
