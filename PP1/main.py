@@ -2,21 +2,18 @@ import math
 
 
 def _check_x_value(x: float) -> bool:
-    """Check whether x is within the expression's domain.
-    Return True for valid values and False otherwise.
+    """Checks whether x is within the expression's domain.
+    Returns True for valid values and False for invalid values.
     """
-    is_acceptable = (9 <= x <= 11 and x != 10)
-    return is_acceptable
+    return (9 <= x <= 11 and x != 10)
 
 
 def f(x: float) -> float:
-    """Calculate the expression for a valid value of x.
-    Return the calculated result as a float.
-    """
+    """Calculates the expression for x and returns the result as a float."""
     result = (
-        math.sin(math.pi / 62) ** 2
-        + 25 * math.e / (52 * math.pi)
-        - 12 / ((x - 10) * (x + 8))
+        math.sin(2 / 62)
+        + (25 * math.e) / (52 * math.pi)
+        * (12 / ((x - 10) * (x + 8)))
         + 3 * math.acos(x - 10)
         - (14 + math.sqrt(x + 15)) / (x - 5)
     )
@@ -24,7 +21,7 @@ def f(x: float) -> float:
 
 
 def main() -> None:
-    """Handles user input and display the calculation result."""
+    """Handles user input and displays the calculation result."""
     print("Author: Marchenko Artem")
     print("Variant 131. Calculating the value of a mathematical expression.")
 
