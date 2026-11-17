@@ -1,2 +1,2 @@
 Програмний проєкт (лаб.) №2  
-Посилання на відеозапис - https://drive.google.com/file/d/1LmWf-hMr_KnBqns9OQbbJSDGnZWvMVsb/view?usp=sharing
+Посилання на відеозапис та фото - https://drive.google.com/drive/folders/192QmaRxu9H1KpOrUxoqycpbHJdywYXSO?usp=sharing

@@ -4,12 +4,6 @@ A = 0
 B = 1
 
 
-def _welcome():
-    """Shows the author and variant."""
-    print("Author: Artem Marchenko, K-13")
-    print("Variant 131. Calculates the sum of the series for x.")
-
-
 def s(x, eps):
     """Calculates the sum of series S."""
     a_n = 1.0
@@ -24,19 +18,30 @@ def s(x, eps):
     return total
 
 
+def _welcome():
+    """Prints the information about author, variant and program."""
+    print("Author: Artem Marchenko, K-13")
+    print("Variant 131. Calculates the sum of the series for x.")
+
+
+def _print_error(error_reason):
+    """Prints the error message with its reason."""
+    print(f"\n***** error\n{error_reason}")
+
+
 def _read_x():
     """Reads x and checks whether x is acceptable."""
     try:
         x = float(input(f"Enter x from [{A}, {B}]: "))
         if not A <= x <= B:
-            print(f"\n***** error\nx must be in [{A}, {B}].")
+            _print_error(f"x must be in [{A}, {B}].")
             return None
 
         return x
     except ValueError:
-        print("\n***** error\nEnter a real number for x.")
+        _print_error("x must be a real number.")
     except EOFError:
-        print("\n***** error\nInput ended before x was entered.")
+        _print_error("Input ended before x was entered.")
 
     return None
 
@@ -46,14 +51,14 @@ def _read_eps():
     try:
         eps = float(input("Enter positive eps (for example, 1e-6): "))
         if not 0 < eps < float("inf"):
-            print("\n***** error\neps must be a finite positive number.")
+            _print_error("eps must be a finite positive number.")
             return None
 
         return eps
     except ValueError:
-        print("\n***** error\nEnter a real number for eps.")
+        _print_error("eps must be a real number.")
     except EOFError:
-        print("\n***** error\nInput ended before eps was entered.")
+        _print_error("Input ended before eps was entered.")
 
     return None
 
@@ -77,12 +82,10 @@ def main():
         print(f"for eps = {eps:.8E}")
         print(f"result = {result:.8f}")
 
-    except Exception:
-        print("\n***** error\nunexpected error occurred")
+    except Exception as error:
+        _print_error(f"Unexpected error: {error}")
     except KeyboardInterrupt:
         print("\nprogram aborted")
-    except BaseException:
-        print("\n***** error\nthe program stopped unexpectedly")
 
 
 main()
